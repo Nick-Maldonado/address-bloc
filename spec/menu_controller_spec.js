@@ -2,9 +2,6 @@ const MenuController = require("../controllers/MenuController");
 
 describe("MenuController", () => {
   
-<<<<<<< HEAD
-});
-=======
   describe("#getContactCount()", () => {
     beforeEach(() => {
       this.menu = new MenuController();
@@ -15,11 +12,11 @@ describe("MenuController", () => {
     });
 
     it("should return 1 when there is exactly one contact in the book", () => {
-      this.menu.contacts.push("Bob");
+      this.menu.book.addContact("Bob","1111111111","mail@mail.com");
       expect(this.menu.getContactCount()).toBe(1);
     });
   });
->>>>>>> testing-assignment
+
 
   describe("#remindMe()", () => {
     beforeEach(() => {

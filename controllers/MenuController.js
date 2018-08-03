@@ -65,7 +65,7 @@ module.exports = class MenuController {
 
 
   getContactCount() {
-    return this.contacts.length;
+    return this.book.contacts.length;
   }
 
   getDate() {
@@ -84,6 +84,7 @@ module.exports = class MenuController {
 
     console.log(`${mm}/${dd}/${yyyy}`);
   }
+
   remindMe() {
     return "Learning is a life-long pursuit.";
   }
