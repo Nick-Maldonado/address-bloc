@@ -11,6 +11,7 @@ module.exports = class MenuController {
         choices: [
           "Add new contact",
           "View all contacts",
+          "Get date",
           "Exit"
         ]
       }
@@ -31,6 +32,9 @@ module.exports = class MenuController {
           break;
         case "Exit":
           this.exit();
+        case "Get date":
+          this.getDate();
+          break;
         default:
           console.log("Invalid input");
           this.main();
@@ -63,8 +67,30 @@ module.exports = class MenuController {
     process.exit();
   }
 
+
   getContactCount() {
-    return this.contacts.length;
+    return this.book.contacts.length;
+  }
+
+  getDate() {
+    let d = new Date();
+    let dd = d.getDate();
+    let mm = d.getMonth() + 1;
+    let yyyy = d.getFullYear();
+
+    if (dd < 10) {
+      dd = '0' + dd;
+    }
+
+    if (mm <10) {
+      mm = '0' + mm;
+    }
+
+    console.log(`${mm}/${dd}/${yyyy}`);
+  }
+
+  remindMe() {
+    return "Learning is a life-long pursuit.";
   }
 
   getContacts() {
