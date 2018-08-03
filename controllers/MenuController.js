@@ -84,4 +84,7 @@ module.exports = class MenuController {
 
     console.log(`${mm}/${dd}/${yyyy}`);
   }
+  remindMe() {
+    return "Learning is a life-long pursuit.";
+  }
 }
